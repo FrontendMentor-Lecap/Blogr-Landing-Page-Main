@@ -18,6 +18,10 @@
   --body-grd-2: hsl(237, 23%, 32%);
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Overpass', sans-serif;
   /* font-family: 'Ubuntu', sans-serif; */
@@ -25,10 +29,10 @@ body {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   display: flex;
-  padding: 5vh 5vw;
+  padding: 10vh 5vw;
   align-items: center;
   justify-content: space-between;
 }
@@ -44,9 +48,106 @@ header {
 .hero {
   background-image: url('./images/bg-pattern-intro.svg'),
     linear-gradient(90deg, var(--cta-grd-1), var(--cta-grd-2));
-  background-size: 150%, 100%;
-  background-position: 10vw -100vh, center;
+  background-size: 310%, 100%;
+  background-position: 38% 35%, center;
   background-repeat: no-repeat;
-  padding: 20vh 0;
+  padding: 30vh 0 25vh;
   color: var(--txt);
+  border-radius: 0 0 0 4rem;
+}
+
+.hero__title {
+  font-size: 2rem;
+  margin: 0 11%;
+}
+
+.hero__text {
+  font-weight: 300;
+  opacity: 0.6;
+  margin: 5% 15%;
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0 0;
+}
+
+.button {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  color: var(--cta-txt);
+  background-color: white;
+  border-radius: 5rem;
+}
+
+.transparent__button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.transparent__button:hover {
+  background-color: white;
+  color: var(--cta-txt);
+}
+
+.filled__button:hover {
+  background-color: var(--cta-hvr-bck);
+  color: white;
+}
+
+.future {
+  padding: 6rem 0 15rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.future img {
+  width: 110%;
+  margin: 3rem 3rem 0;
+}
+
+.content__subtitle {
+  font-size: 1.5rem;
+  margin: 3rem 15% 1rem;
+}
+
+.content__paragraph {
+  margin: 0 10%;
+  line-height: 1.5;
+}
+
+.mobile {
+  position: relative;
+  background-image: url('./images/bg-pattern-circles.svg'),
+    linear-gradient(var(--body-grd-1), var(--body-grd-2));
+  background-size: 150% 100%;
+  background-position: center -40vh, center center;
+  background-repeat: no-repeat;
+  padding: 13rem 0 6rem;
+  border-radius: 0 5rem 0 5rem;
+  color: white;
+}
+
+.mobile img {
+  position: absolute;
+  width: 100%;
+  top: -50%;
+  left: 5%;
+  transform: translateX(-5%) translateY(25%);
+}
+
+.mobile__subtitle {
+  font-size: 1.8rem;
+}
+
+.mobile__paragraph {
+  padding: 2rem 10%;
+  line-height: 1.5;
 }
