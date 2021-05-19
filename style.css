@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cta-txt: hsl(356, 100%, 66%);
+  --cta-hvr-bck: hsl(355, 100%, 74%);
+  --hdgs: hsl(208, 49%, 24%);
+  --txt: hsl(0, 0%, 100%);
+  --foot-txt: hsl(240, 2%, 79%);
+  --body-copy: hsl(207, 13%, 34%);
+  --foot-bck: hsl(240, 10%, 16%);
+  --cta-grd-1: hsl(13, 100%, 72%);
+  --cta-grd-2: hsl(353, 100%, 62%);
+  --body-grd-1: hsl(237, 17%, 21%);
+  --body-grd-2: hsl(237, 23%, 32%);
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  padding: 5vh 5vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 5rem;
+}
+
+.header__navigation {
+  display: none;
+}
+
+.hero {
+  background-image: url('./images/bg-pattern-intro.svg'),
+    linear-gradient(90deg, var(--cta-grd-1), var(--cta-grd-2));
+  background-size: 150%, 100%;
+  background-position: 10vw -100vh, center;
+  background-repeat: no-repeat;
+  padding: 20vh 0;
+  color: var(--txt);
+}
