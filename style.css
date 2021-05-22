@@ -51,17 +51,25 @@ header {
 .header__navigation {
   width: 90vw;
   position: fixed;
-  display: flex;
+  display: none;
   top: 20vh;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 2rem 0;
   background-color: #fff;
   border-radius: 0.5rem;
+  z-index: 999;
+}
+
+.categories__navigation {
+  width: 100%;
+  line-height: 2;
+  margin: 0 0 1rem;
 }
 
 .main__category {
-  padding: 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .main__category img {
@@ -72,6 +80,35 @@ header {
 
 .sub__navigation {
   display: none;
+  margin: 1rem 0;
+  padding: 1rem 0;
+  background-color: lightgray;
+  border-radius: 0.5rem;
+  width: 100%;
+  line-height: 2;
+}
+
+.sub__navigation a {
+  color: var(--body-copy);
+}
+
+.sign {
+  display: flex;
+  width: 100%;
+  padding: 1rem 0 2rem;
+  flex-direction: column;
+  line-height: 3;
+  border-top: 2px solid lightgray;
+}
+
+.sign {
+  font-size: 1.2rem;
+}
+
+#sign-btn {
+  color: #fff;
+  background: linear-gradient(90deg, var(--cta-grd-1), var(--cta-grd-2));
+  padding: 1rem 2rem;
 }
 
 #login-btn {
