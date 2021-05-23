@@ -20,7 +20,6 @@
 
 a {
   text-decoration: none;
-  color: var(--foot-txt);
 }
 
 ul {
@@ -37,21 +36,29 @@ body {
 header {
   position: absolute;
   width: 100vw;
+  margin: 5vh 0 0;
   display: flex;
-  padding: 10vh 5vw;
+  padding: 0 5vw;
   align-items: center;
-  justify-content: space-between;
 }
 
 .header__logo {
   width: 5rem;
   cursor: pointer;
+  margin: 0 0 1rem;
 }
 
 .header__navigation {
+  display: flex;
+  align-items: bottom;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__navigation.mobile {
   width: 90vw;
   position: fixed;
-  display: none;
+  display: flex;
   top: 20vh;
   flex-direction: column;
   align-items: center;
@@ -62,61 +69,110 @@ header {
 }
 
 .categories__navigation {
-  width: 100%;
-  line-height: 2;
-  margin: 0 0 1rem;
+  display: flex;
+  margin: 0 5vw;
 }
 
 .main__category {
-  font-size: 1.2rem;
-  font-weight: 700;
+  position: relative;
+  display: flex;
 }
 
-.main__category img {
-  width: 0.8rem;
-  color: red;
-  cursor: pointer;
+.main__category a {
+  display: flex;
+  align-items: center;
+  margin: 0 2vw 1rem;
+  font-size: 1rem;
+  color: var(--txt);
+  font-weight: 500;
+}
+
+.main__category a:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.main__category:hover .sub__navigation {
+  display: block;
+}
+
+.main__category:hover img {
+  transform: rotate(180deg);
+}
+
+.main__category a img {
+  height: 50%;
+  margin: 0 0.5rem;
 }
 
 .sub__navigation {
   display: none;
-  margin: 1rem 0;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
-  background-color: lightgray;
+  background-color: white;
   border-radius: 0.5rem;
-  width: 100%;
   line-height: 2;
 }
 
 .sub__navigation a {
   color: var(--body-copy);
+  font-size: 0.8rem;
+  margin: 0 3rem 0 1rem;
+  padding: 0;
+  font-weight: 500;
+}
+
+.sub__navigation a:hover {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 .sign {
+  justify-self: right;
+  justify-content: right;
   display: flex;
-  width: 100%;
-  padding: 1rem 0 2rem;
-  flex-direction: column;
-  line-height: 3;
-  border-top: 2px solid lightgray;
 }
 
-.sign {
-  font-size: 1.2rem;
-}
-
-#sign-btn {
-  color: #fff;
-  background: linear-gradient(90deg, var(--cta-grd-1), var(--cta-grd-2));
+.sign .button {
+  margin: 0 0 0 1rem;
   padding: 1rem 2rem;
+  font-weight: 500;
 }
 
 #login-btn {
-  color: var(--hdgs);
+  border: none;
+  color: var(--txt);
+  opacity: 0.8;
+}
+
+#login-btn:hover {
+  color: var(--cta-txt);
 }
 
 #burger-icon {
   cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__navigation {
+    display: none;
+  }
+
+  .header__logo {
+    margin: 0;
+  }
+  #burger-icon {
+    display: block;
+  }
 }
 
 .hero {
