@@ -55,19 +55,6 @@ header {
   width: 100%;
 }
 
-.header__navigation.mobile {
-  width: 90vw;
-  position: fixed;
-  display: flex;
-  top: 20vh;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 2rem 0;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  z-index: 999;
-}
-
 .categories__navigation {
   display: flex;
   margin: 0 5vw;
@@ -94,6 +81,10 @@ header {
 
 .main__category:hover .sub__navigation {
   display: block;
+}
+
+.dark__arrow {
+  display: none;
 }
 
 .main__category:hover img {
@@ -157,6 +148,11 @@ header {
   display: none;
 }
 
+#cross-icon {
+  display: none;
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   header {
     justify-content: space-between;
@@ -170,8 +166,74 @@ header {
   .header__logo {
     margin: 0;
   }
+
   #burger-icon {
     display: block;
+  }
+
+  .header__navigation.active {
+    width: 90vw;
+    position: fixed;
+    display: flex;
+    top: 20vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem 0;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    z-index: 999;
+  }
+
+  .sub__navigation.active {
+    display: block;
+  }
+
+  .categories__navigation {
+    flex-direction: column;
+  }
+
+  .dark__arrow {
+    display: unset;
+  }
+
+  .light__arrow {
+    display: none;
+  }
+
+  .main__category {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main__category a {
+    color: var(--body-copy);
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .sign {
+    width: 100%;
+    flex-direction: column;
+    margin: 1rem 0;
+    line-height: 3.5;
+    border-top: 1px solid lightgray;
+    padding: 1rem 0;
+  }
+
+  .sign .button {
+    margin: 0;
+    font-size: 1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  #login-btn {
+    color: var(--hdgs);
+    opacity: 1;
+  }
+
+  #sign-btn {
+    color: var(--txt);
+    background: linear-gradient(90deg, var(--cta-grd-1), var(--cta-grd-2));
   }
 }
 
@@ -294,7 +356,14 @@ footer {
   padding: 3rem 0;
   background-color: var(--foot-bck);
   border-radius: 0 5rem 0 0;
+}
+
+footer a {
   color: var(--foot-txt);
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer img {
