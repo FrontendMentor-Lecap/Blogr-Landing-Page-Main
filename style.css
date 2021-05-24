@@ -55,6 +55,10 @@ header {
   width: 100%;
 }
 
+.header__navigation input[type='checkbox'] {
+  display: none;
+}
+
 .categories__navigation {
   display: flex;
   margin: 0 5vw;
@@ -63,24 +67,20 @@ header {
 .main__category {
   position: relative;
   display: flex;
-}
-
-.main__category a {
-  display: flex;
   align-items: center;
-  margin: 0 2vw 1rem;
+  margin: 0 2vw 0;
   font-size: 1rem;
   color: var(--txt);
   font-weight: 500;
 }
 
-.main__category a:hover {
+.main__category:hover {
   font-weight: 700;
   text-decoration: underline;
 }
 
 .main__category:hover .sub__navigation {
-  display: block;
+  display: inline-block;
 }
 
 .dark__arrow {
@@ -99,6 +99,7 @@ header {
 .sub__navigation {
   display: none;
   position: absolute;
+  text-align: left;
   top: 100%;
   left: 10%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -184,8 +185,9 @@ header {
     z-index: 999;
   }
 
-  .sub__navigation.active {
+  .main__category input:checked ~ ul {
     display: block;
+    position: relative;
   }
 
   .categories__navigation {
@@ -202,10 +204,9 @@ header {
 
   .main__category {
     width: 100%;
-    justify-content: center;
-  }
 
-  .main__category a {
+    justify-content: center;
+    display: unset;
     color: var(--body-copy);
     font-weight: 700;
     font-size: 1.2rem;
