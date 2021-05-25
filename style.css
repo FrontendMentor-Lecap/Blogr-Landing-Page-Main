@@ -206,6 +206,11 @@ header {
     font-size: 1.2rem;
     line-height: 3;
   }
+
+  .main__category:hover {
+    font-weight: 700;
+    text-decoration: none;
+  }
   .main__category label {
     cursor: pointer;
     display: flex;
