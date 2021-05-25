@@ -356,10 +356,10 @@ header {
   position: relative;
   background-image: url('./images/bg-pattern-circles.svg'),
     linear-gradient(90deg, var(--body-grd-1), var(--body-grd-2));
-  background-size: 160%, 300%;
-  background-position: center -37vh, 200%;
+  background-size: 150%, 100%;
+  background-position: center -30vh, 100%;
   background-repeat: no-repeat;
-  padding: 13rem 0 6rem;
+  padding: 15rem 0 5rem;
   border-radius: 0 5rem 0 5rem;
   color: white;
 }
@@ -367,9 +367,9 @@ header {
 .mobile img {
   position: absolute;
   width: 100%;
-  top: -45%;
-  left: 5%;
-  transform: translateX(-5%) translateY(22.5%);
+  top: 0;
+  left: 0%;
+  transform: translateY(-45%);
 }
 
 .mobile__subtitle {
@@ -492,18 +492,19 @@ footer img {
   .future__desktop__image {
     display: unset;
     position: absolute;
-    width: 55%;
-    max-width: 900px;
+    height: 90%;
+    width: auto;
     right: 0;
     top: 50%;
     transform: translate(30%, -50%);
+    z-index: -1;
   }
 
   .mobile {
     position: relative;
     background-size: 70%, 100%;
     background-position: -50% 80%, center;
-    padding: 6rem 0 6rem 50vw;
+    padding: 8rem 0 8rem 50vw;
     text-align: left;
   }
 
@@ -514,10 +515,17 @@ footer img {
   }
 
   .mobile img {
-    width: 40%;
+    height: 140%;
+    width: auto;
     left: 5%;
     top: 0%;
     transform: translate(0, -10%);
+  }
+
+  .desktop {
+    position: relative;
+    padding: 25vh 0 25vh 50vw;
+    text-align: left;
   }
 
   .laptop__mobile__image {
@@ -526,5 +534,51 @@ footer img {
 
   .laptop__desktop__image {
     display: unset;
+    position: absolute;
+    height: 80%;
+    top: 50%;
+    left: 0%;
+    transform: translate(-29%, -50%);
+  }
+
+  .desktop .content__subtitle {
+    margin: 1rem 0;
+  }
+
+  .desktop .content__paragraph {
+    margin: 0 0 5rem;
+    max-width: 50ch;
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4rem 10vw;
+  }
+
+  .footer__navigation {
+    display: flex;
+    text-align: left;
+    margin: 0 0 0 10vw;
+  }
+
+  .footer__category {
+    margin: 0 7vw;
+  }
+
+  .footer__main__category {
+    padding: 0.5rem 0 1.5rem;
+  }
+
+  .footer__sub__category {
+    line-height: 2;
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .attribution {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
