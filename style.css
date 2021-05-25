@@ -82,6 +82,7 @@ header {
 .main__category:hover .sub__navigation {
   height: auto;
   opacity: 1;
+  text-decoration: none;
 }
 
 .dark__arrow {
@@ -250,6 +251,7 @@ header {
     font-size: 1.1rem;
     margin: 0;
     font-weight: 700;
+    text-decoration: none;
   }
 
   .sign {
