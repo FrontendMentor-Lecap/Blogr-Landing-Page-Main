@@ -172,6 +172,9 @@ header {
 
   #burger-icon {
     display: block;
+    top: 5%;
+    right: 10%;
+    z-index: 999;
   }
 
   .header__navigation.active {
