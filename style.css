@@ -80,7 +80,8 @@ header {
 }
 
 .main__category:hover .sub__navigation {
-  display: inline-block;
+  height: auto;
+  opacity: 1;
 }
 
 .dark__arrow {
@@ -97,11 +98,12 @@ header {
 }
 
 .sub__navigation {
-  display: none;
   position: absolute;
   text-align: left;
-  top: 100%;
-  left: 10%;
+  height: 0;
+  opacity: 0;
+  top: 150%;
+  left: 0%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   background-color: white;
@@ -229,6 +231,9 @@ header {
   }
 
   .sub__navigation {
+    display: none;
+    height: auto;
+    opacity: 1;
     background-color: rgba(239, 239, 241, 1);
     position: relative;
     width: 100%;
@@ -474,7 +479,6 @@ footer img {
   }
 
   .future .content__subtitle {
-    width: 50%;
     margin: 0;
     padding-top: 5vh;
   }
@@ -580,5 +584,38 @@ footer img {
   .attribution {
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 500px) and (max-width: 929px) {
+  .future__mobile__image {
+    max-width: 700px;
+  }
+
+  .mobile img {
+    max-height: 500px;
+    width: auto;
+    left: 50%;
+    top: -0%;
+    transform: translate(-50%, -45%);
+  }
+
+  .laptop__mobile__image {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 930px) and (max-width: 1150px) {
+  .future__desktop__image {
+    height: 70%;
+    right: -10%;
+  }
+  .mobile img {
+    left: 0%;
+    height: 135%;
+  }
+
+  .laptop__desktop__image {
+    height: 70%;
   }
 }
