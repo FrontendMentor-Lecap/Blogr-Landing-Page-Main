@@ -333,9 +333,13 @@ header {
   align-items: center;
 }
 
-.future img {
+.future__mobile__image {
   width: 110%;
   margin: 3rem 3rem 0;
+}
+
+.future__desktop__image {
+  display: none;
 }
 
 .content__subtitle {
@@ -351,9 +355,9 @@ header {
 .mobile {
   position: relative;
   background-image: url('./images/bg-pattern-circles.svg'),
-    linear-gradient(var(--body-grd-1), var(--body-grd-2));
-  background-size: 160% 100%;
-  background-position: center -37vh, center center;
+    linear-gradient(90deg, var(--body-grd-1), var(--body-grd-2));
+  background-size: 160%, 300%;
+  background-position: center -37vh, 200%;
   background-repeat: no-repeat;
   padding: 13rem 0 6rem;
   border-radius: 0 5rem 0 5rem;
@@ -381,8 +385,12 @@ header {
   padding: 4rem 0;
 }
 
-.desktop img {
+.laptop__mobile__image {
   width: 100%;
+}
+
+.laptop__desktop__image {
+  display: none;
 }
 
 footer {
@@ -423,4 +431,100 @@ footer img {
   left: 30%;
   transform: translateX(-15%);
   opacity: 0.5;
+}
+
+@media (min-width: 930px) {
+  header {
+    margin: 0;
+    padding: 5vh 10vw;
+    width: 100%;
+  }
+
+  .hero {
+    background-size: 220%, 200%;
+    background-position: -28vw 53%, 100%;
+    padding: 30vh 0 15vh;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .hero__text {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    opacity: 0.7;
+  }
+
+  .content__title {
+    font-size: 2rem;
+  }
+
+  .future {
+    position: relative;
+    text-align: left;
+    align-items: unset;
+    padding: 8rem 22vw 10rem 10vw;
+    overflow: hidden;
+  }
+
+  .future .content__title {
+    align-self: center;
+    padding-bottom: 1rem;
+  }
+
+  .future .content__subtitle {
+    width: 50%;
+    margin: 0;
+    padding-top: 5vh;
+  }
+
+  .future .content__paragraph {
+    margin: 1rem 0;
+    max-width: 50ch;
+    line-height: 2;
+  }
+
+  .future__mobile__image {
+    display: none;
+  }
+
+  .future__desktop__image {
+    display: unset;
+    position: absolute;
+    width: 55%;
+    max-width: 900px;
+    right: 0;
+    top: 50%;
+    transform: translate(30%, -50%);
+  }
+
+  .mobile {
+    position: relative;
+    background-size: 70%, 100%;
+    background-position: -50% 80%, center;
+    padding: 6rem 0 6rem 50vw;
+    text-align: left;
+  }
+
+  .mobile__paragraph {
+    padding: 1rem 0 0;
+    max-width: 50ch;
+    font-size: 0.85rem;
+  }
+
+  .mobile img {
+    width: 40%;
+    left: 5%;
+    top: 0%;
+    transform: translate(0, -10%);
+  }
+
+  .laptop__mobile__image {
+    display: none;
+  }
+
+  .laptop__desktop__image {
+    display: unset;
+  }
 }
